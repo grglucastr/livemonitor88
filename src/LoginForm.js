@@ -7,6 +7,7 @@ class LoginForm extends Component {
           <div className="col-sm-12 col-md-4">
             <div id="formContainer" style={{marginTop: '10rem'}}>
               <h4 className="text-center" style={{fontWeight: "normal", paddingBottom:'.3em', marginBottom:'.8em', borderBottom:'1px dotted #eee'}}>LiveMonitor88</h4>
+              <p className="text-center">Login Access</p>
               <form>
                 <div className="form-group">
                   <input type="text" className="form-control" id="email"  placeholder="Enter Username" />

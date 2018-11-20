@@ -1,11 +1,14 @@
 body,html{
-  background-color: #000;
+  background-color: #122937;
   color: #fff;
 }
 
 #formContainer{
-  background-color:#122937;
+  background-color:#282C34;
   padding: 1em;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px; 
+  box-shadow: 1px 1px 10px #fff;
 }
 
 
