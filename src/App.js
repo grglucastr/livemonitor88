@@ -12,7 +12,7 @@ class App extends Component {
     super(props);  
 
     this.state = {
-      isUserLogged: true
+      isUserLogged: false
     }
 
     this.doUserLogin = this.doUserLogin.bind(this);
@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   doUserLogin(){
-    this.setState({isUserLogged:false});
+    this.setState({isUserLogged:true});
   }
 
   doUserLogout(){
