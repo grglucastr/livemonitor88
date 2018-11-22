@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Redirect } from 'react-router-dom';
 
 class LoginForm extends Component {
 
@@ -7,11 +8,18 @@ class LoginForm extends Component {
     this.state = {
       username: '',
       password: '',
-      isNotValid:false
+      isNotValid:false,
+      redirectToDashboard: false
     }
 
     this.handleInputChanges = this.handleInputChanges.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
+  }
+
+  componentDidMount(){
+    if(this.props.userLogged){
+      this.setState({redirectToDashboard:true});
+    }
   }
 
   handleInputChanges = event => {
@@ -26,13 +34,12 @@ class LoginForm extends Component {
 
     if(username === 'admin' && password === 'admin'){
       this.clearFormFields();
-      console.log('Do redirect');
-      this.setState({isNotValid:false});
+      this.setState({isNotValid:false, redirectToDashboard:true});
+      this.props.OnLogin();
       return;
     }
-    this.setState({isNotValid:true});
-   
-    
+
+    this.setState({isNotValid:true}); 
   }
 
   clearFormFields = () =>{
@@ -40,11 +47,18 @@ class LoginForm extends Component {
   }
 
   render() {
+
+    const { redirectToDashboard } = this.state;
+
+    if(redirectToDashboard){
+      return <Redirect to="/dashboard" />
+    }
+
     return(
       <div className="row justify-content-center">
           <div className="col-sm-12 col-md-4">
-            <div id="formContainer" style={{marginTop: '10rem'}}>
-              <h4 className="text-center" style={{fontWeight: "normal", paddingBottom:'.3em', marginBottom:'.8em', borderBottom:'1px dotted #eee'}}>LiveMonitor88</h4>
+            <div className="container-shape" style={{marginTop: '10rem'}}>
+              <h4 className="text-center" style={{}}>LiveMonitor88</h4>
               <p className="text-center">Login Access</p>
               <form onSubmit={this.handleFormSubmit}>
                 <div className="form-group">
@@ -76,7 +90,6 @@ class LoginForm extends Component {
                   ('')
                 }
                 
-
                 <div className="form-group text-right">
                   <button className="btn btn-primary">Login</button>
                 </div>

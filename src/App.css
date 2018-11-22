@@ -3,7 +3,7 @@ body,html{
   color: #fff;
 }
 
-#formContainer{
+.container-shape{
   background-color:#282C34;
   padding: 1em;
   border-top-right-radius: 10px;
@@ -11,6 +11,48 @@ body,html{
   box-shadow: 1px 1px 10px #fff;
 }
 
+.main-title{
+  font-weight: normal; 
+  padding-bottom:.3em; 
+  margin-bottom:.8em; 
+  border-bottom:1px dotted #eee;
+}
+
+.dash-panel {
+  border: 0px solid #fff;
+  margin-bottom: 1em;
+  padding: 1.5em 0;
+  border-radius: 5px;
+}
+
+.dash-panel-temperature{
+  background: url("thermometer.png") no-repeat left 90%;
+}
+
+.dash-panel-humidity{
+  background: url("humidity.png") no-repeat left 90%;
+}
+
+.dash-panel h5{
+  font-weight: 100;
+  color: #fff;
+}
+
+.dash-panel-green{
+  background-color: #5BC592;
+}
+
+.dash-panel-red{
+  background-color: #D6535D;
+}
+
+.dash-panel-purple{
+  background-color: #9B8AF7;
+}
+
+.dash-panel-yellow{
+  background-color: #FFAE42;
+}
 
 /* 
 .App {
