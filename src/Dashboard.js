@@ -57,14 +57,14 @@ class Dashboard extends Component {
           <div className="col">
             <div className="dash-panel dash-panel-humidity dash-panel-purple">
               <h5>Room Ideal Humidity</h5>
-              <h2>40%</h2>
+              <h2>45%</h2>
             </div>
           </div>
         
           <div className="col">
             <div className="dash-panel dash-panel-humidity dash-panel-yellow">
               <h5>Room Humidity</h5>
-              <h2>45%</h2>
+              <h2>55%</h2>
             </div>
           </div>
         </div>
