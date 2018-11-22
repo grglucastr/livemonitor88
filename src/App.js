@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   doUserLogin(){
-    this.setState({isUserLogged:true});
+    this.setState({isUserLogged:false});
   }
 
   doUserLogout(){
