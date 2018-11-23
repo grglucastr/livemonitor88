@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Redirect } from 'react-router-dom';
+import {Link, Redirect } from 'react-router-dom';
 
 class LoginForm extends Component {
 
@@ -94,8 +94,15 @@ class LoginForm extends Component {
                   <button className="btn btn-primary">Login</button>
                 </div>
               </form>
+              <div className="col-sm-12">
+                <Link to="/contact">
+                  Contact Support
+                </Link>
+               </div>
             </div>
+            
           </div>
+       
       </div> 
     );
   }

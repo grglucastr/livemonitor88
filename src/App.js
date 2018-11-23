@@ -3,8 +3,11 @@ import './App.css';
 
 import LoginForm from './LoginForm';
 import Dashboard from './Dashboard';
+import Contact from './Contact';
+import NotFound from './NotFound';
 
 import {Switch, Route} from 'react-router-dom';
+
 
 class App extends Component {
 
@@ -42,6 +45,11 @@ class App extends Component {
               OnLogin={this.doUserLogin}
               OnLogout={this.doUserLogout} />
           )}/>
+
+          <Route path="/contact" component={Contact} />
+
+          <Route render={NotFound} />
+
         </Switch>
       </div>
     );

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Redirect} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import './App.css';
 import logo from './logo.png';
 
@@ -33,9 +33,16 @@ class Dashboard extends Component {
             </h3>
           </div>
           <div className="col text-right">
-            <button 
-              onClick={this.doLogout}
-              className="btn btn-default">Logout</button>
+              <Link to="/contact">
+                <button className="btn btn-secondary">
+                  Contact Us
+                </button>
+              </Link>
+
+              <button 
+                onClick={this.doLogout}
+                style={{marginLeft: '3px'}}
+                className="btn btn-danger">Logout</button>
           </div>
         </div>
 
